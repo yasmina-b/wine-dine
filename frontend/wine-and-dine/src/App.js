@@ -7,7 +7,7 @@ import HomePage from './pages/homepage/HomePage';
 
 function App() {
   return (
-    <Routes/>
+    <HomePage/>
   );
 }
 
