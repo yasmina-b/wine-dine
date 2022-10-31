@@ -1,71 +1,75 @@
-.homepage{
-    position:absolute;
-    height:100vh;
-    width: 100%;
-    display:flex column;
-    align-items:center;
-    justify-content: center;
-    background-color:#f6c667
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6c667;
 }
 
-
-.companyname{
-    text-align:center;
-    position:relative;
-    font-size:170px;
-    color:#900c27
-}
-.companyphoto{
-    display: flex;
-    width: 900px !important;
-    margin: auto;
+.homepage {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6c667;
 }
 
-.up{
-    height: 50%;
-    display:flex;
-    align-items: center;
-    flex-direction:column;
-    position:relative;
-    background-color:#f6c667;
+.companyname {
+  text-align: center;
+  position: relative;
+  font-size: 150px;
+  color: #900c27;
 }
-.down{
-    
-    height:800px;
-    display:flex;
-    flex-direction:column;
-    background-color:#f6c667;
-    justify-content: center;
-    align-items: center;
+.companyphoto {
+  display: flex;
+  width: 900px !important;
+  margin: auto;
 }
 
-.loginbutton{
-   position: relative;
-   font-size:50px;
-   background-color:#900c27;
-   color:white;
-   bottom: 45%;
-   height:100px;
-   width: 500px
+.up {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: #f6c667;
+}
+.down {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6c667;
+  justify-content: center;
+  align-items: center;
 }
 
-.descriptionhomepage{
-    font-size:60px;
-    color:#900c27;
-    position: relative;
-    top:10%;
+.loginbutton {
+  position: relative;
+  font-size: 50px;
+  background-color: #900c27;
+  color: white;
+  bottom: 45%;
+  height: 100px;
+  width: 500px;
 }
 
-.registerbutton{
-    font-size:50px;
-    position:relative;
-    height:100px;
-    color:#900c27;
-    width: 500px;
-    top:20%;
-    font-weight:800;
-    background-color:#f6c667;
-    border: none;
-    /* outline:none; */
+.descriptionhomepage {
+  font-size: 60px;
+  color: #900c27;
+  position: relative;
+  top: 10%;
 }
 
+.registerbutton {
+  font-size: 50px;
+  position: relative;
+  height: 100px;
+  color: #900c27;
+  width: 500px;
+  top: 20%;
+  font-weight: 800;
+  background-color: #f6c667;
+  border: none;
+  margin-top: 30px;;
+  /* outline:none; */
+}
