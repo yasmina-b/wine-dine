@@ -1,26 +1,29 @@
 import React from "react";
-import "./HomePage.css" 
-import Logo from "../../photos/logo.png"
+import { Link } from "react-router-dom";
+import "./HomePage.css";
+import Logo from "../../photos/logo.png";
 
-const HomePage= ()=>{
-    return(
-        <div className="homepage">
-           
-           <div className="wraper">
-
-                <div className="up">
-                    <h1 className="companyname">Wine&Dine</h1> 
-                    <img className="companyphoto"src={Logo}></img>
-                </div>
-
-                <div className="down">
-                    <button className="loginbutton">Login</button>
-                    <h1 className="descriptionhomepage">Don't have an account yet?</h1>
-                    <button className="registerbutton">Sign Up</button>
-                </div>
-           </div>
+const HomePage = () => {
+  return (
+    <div className="homepage">
+      <div className="wraper">
+        <div className="up">
+          <h1 className="companyname"></h1>
+          <img className="companyphoto" src={Logo} alt="image loading..."></img>
         </div>
-    )
-}
 
-export default HomePage
+        <div className="down">
+          <Link to="/login">
+            <button className="loginbutton">Login</button>
+          </Link>
+          <h1 className="descriptionhomepage">Don't have an account yet?</h1>
+          <Link to="/register">
+            <button className="registerbutton">Sign Up</button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
