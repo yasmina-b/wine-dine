@@ -1,0 +1,39 @@
+.input-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 509px;
+    border-radius: 10px;
+    margin-top: 60px;
+    cursor: pointer;
+  }
+  
+  .input-wrapper {
+  
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .button-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button {
+    background-color: #978a8d;
+    color: white;
+    padding: 35px;
+    font-size: 150px;
+    font-weight: 640;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin-top:100px;
+    
+    font-family: 'Montserrat', sans-serif;
+  }
+  
