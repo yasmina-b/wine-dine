@@ -2,10 +2,13 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./LoginPage.css"
+import "./LoginPage.css";
+import AuthContext from "../../context/AuthContext";
 
 function LogInPage() {
   const navigate = useNavigate();
+
+  const {setUser} = React.useContext(AuthContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,12 +21,12 @@ function LogInPage() {
       password,
     });
 
+    setUser(res.data);
     localStorage.setItem("user", JSON.stringify(res.data));
 
     if (res.status === 200) {
       console.log("login successful");
-      navigate('/');
-
+      navigate("/");
     }
   };
   return (
@@ -43,7 +46,9 @@ function LogInPage() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button className="button" onClick={(e) => handleLogin(e)}>LOGIN</button>
+      <button className="button" onClick={(e) => handleLogin(e)}>
+        LOGIN
+      </button>
     </div>
   );
 }
