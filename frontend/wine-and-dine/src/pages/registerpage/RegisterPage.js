@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./RegisterPage.css";
+import Logo from "../../photos/logo.png";
 
 function RegisterPage() {
   const navigate = useNavigate();
@@ -34,7 +35,9 @@ function RegisterPage() {
     <div>
       <div className="title">SIGN UP</div>
       <form>
+        <div className="label-wrapper">
         <label className="labels">First Name</label>
+        </div>
         <div className="input-wrapper">
         <input
           className="input-style"
@@ -43,8 +46,9 @@ function RegisterPage() {
           onChange={(e) => setFirstName(e.target.value)}
         />
         </div>
-        
+        <div className="label-wrapper">
         <label className="labels">Last Name</label>
+        </div>
         <div className="input-wrapper">
         <input
           className="input-style"
@@ -53,7 +57,9 @@ function RegisterPage() {
           onChange={(e) => setLastName(e.target.value)}
         />
         </div>
+        <div className="label-wrapper">
         <label className="labels">Email</label>
+        </div>
         <div className="input-wrapper">
         <input
           className="input-style"
@@ -62,7 +68,9 @@ function RegisterPage() {
           onChange={(e) => setEmail(e.target.value)}
         />
         </div>
+        <div className="label-wrapper">
         <label className="labels">Phone Number</label>
+        </div>
         <div className="input-wrapper">
         <input
           className="input-style"
@@ -71,7 +79,9 @@ function RegisterPage() {
           onChange={(e) => setPhoneNumber(e.target.value)}
         />
         </div>
+        <div className="label-wrapper">
         <label className="labels">Password</label>
+        </div>
         <div className="input-wrapper">
         <input
           className="input-style"
@@ -83,6 +93,7 @@ function RegisterPage() {
         <div className="button-wrapper">
         <button className="button" onClick={(e) => handleRegister(e)}>Sign up</button>
         </div>
+        <img className="companyphoto-registerpage" src={Logo} alt="image loading..."></img>
       </form>
     </div>
   );
