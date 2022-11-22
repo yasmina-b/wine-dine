@@ -23,17 +23,23 @@
     justify-content: center;
   }
   
-  .button {
-    background-color: #978a8d;
+  .button-login {
+    background-color: #900c27;
     color: white;
-    padding: 35px;
-    font-size: 150px;
-    font-weight: 640;
+    padding: 25px;
+    font-size: 50px;
+    font-weight: 140;
     display: flex;
     justify-content: center;
     width: 400px;
-    margin-top:100px;
+    margin-top:700px;
     
     font-family: 'Montserrat', sans-serif;
+  }
+
+  .companyphoto-loginpage{
+    display: flex;
+    width: 500px !important;
+    margin:auto
   }
   

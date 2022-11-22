@@ -24,8 +24,14 @@
   font-size: 50px;
   font-weight: 14;
   letter-spacing: 2px;
-  margin-top: 90px;
+  margin-top: 50px;
   font-family: 'Montserrat', sans-serif;
+}
+
+.label-wrapper{
+  display: flex;
+  justify-content: center;
+  display: flex;
 }
 
 .input-style {
@@ -63,7 +69,14 @@
   display: flex;
   justify-content: center;
   width: 400px;
-  margin-top:100px;
+  margin-top:80px;
   
   font-family: 'Montserrat', sans-serif;
+}
+
+
+ .companyphoto-registerpage{
+  display: flex;
+  width: 350px !important;
+  margin:auto;
 }
