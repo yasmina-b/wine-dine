@@ -1,16 +1,19 @@
-import React, { createFactory } from "react";
-import "./navbar.css"
+import React from "react";
+import "./navbar.css";
+import Logo from "../../photos/logo.png";
 
-const Navbar =() =>{
-    return(
-        <div className="navbar">
-
-            <div className="name">
-                <h3>Wine&dine</h3>
-            </div>
-            
+const Navbar = () => {
+  return (
+    <div>
+      <div className="container">
+        <div className="wrapper">
+          <div className="center">
+            <img className="image-logo" src={Logo} alt="image loading..."></img>
+          </div>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;

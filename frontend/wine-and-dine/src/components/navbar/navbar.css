@@ -1,21 +1,20 @@
-.navbar{
-    background-color: rgb(202, 213, 50);
-    position: absolute;
-    height:1200px;
-    width: 100%;
-    left:0px;
-    top:0px;
-    color:red;
-    
+.container {
+  height: 200px;
+  background-color: #f6c667;
 }
 
-.name{
-   
-    background-color: rgb(39, 39, 39);
-    width: 100%;
-    font-size:100px;
-    text-align: center;
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.center {
+  flex: 1;
+  text-align: center;
+}
 
+.image-logo {
+  height: 200px;
 
+}

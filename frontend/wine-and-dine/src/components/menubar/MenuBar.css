@@ -1,0 +1,31 @@
+.container2 {
+  height: 60px;
+  background-color: #f6c667;
+  margin-top: 1700px;
+}
+
+.wrapper2 {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  flex: 1;
+  text-align: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
