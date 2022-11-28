@@ -12,14 +12,18 @@
 .input-style {
   margin-top: 50px;
   height: 30px;
+  width: 700px;
   padding: 10px;
   text-align: center;
   margin-bottom: 3px;
 }
 
+
+
 .input-icons {
   width: 100%;
   margin-bottom: 10px;
+  
 }
 
 .input-icons span {

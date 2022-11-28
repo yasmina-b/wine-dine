@@ -1,6 +1,8 @@
 import React from "react";
 import "./MenuBar.css";
 
+
+
 const MenuBar = () => {
   return (
     <div>
@@ -11,13 +13,13 @@ const MenuBar = () => {
       <div className="container2">
         <div className="wrapper2">
           <div className="left">
-            <span class="material-symbols-outlined">event</span>
+            <span className="material-symbols-outlined">event</span>
           </div>
           <div className="center">
-            <span class="material-symbols-outlined">account_circle</span>
+            <span className="material-symbols-outlined">account_circle</span>
           </div>
           <div className="right">
-            <span class="material-symbols-outlined">star</span>
+            <span className="material-symbols-outlined">star</span>
           </div>
         </div>
       </div>
