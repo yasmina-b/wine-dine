@@ -15,7 +15,7 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
-      <AppRoutes />;
+      <AppRoutes />
     </AuthContext.Provider>
   );
 }

@@ -9,7 +9,7 @@ import Logo from "../../photos/logo.png";
 function LogInPage() {
   const navigate = useNavigate();
 
-  const {setUser} = React.useContext(AuthContext);
+  const { setUser } = React.useContext(AuthContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,41 +27,45 @@ function LogInPage() {
 
     if (res.status === 200) {
       console.log("login successful");
-      navigate("/");
+      navigate("/restaurants");
     }
   };
   return (
-    <div>
+    <body>
       <div className="title">LOGIN</div>
       <div className="label-wrapper">
-      <label className="labels">Email</label>
+        <label className="labels">Email</label>
       </div>
       <div className="input-wrapper">
-      <input
-        className="input-style"
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <input
+          className="input-style"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
       <div className="label-wrapper">
-      <label className="labels">Password</label>
+        <label className="labels">Password</label>
       </div>
       <div className="input-wrapper">
-      <input
-        className="input-style"
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <input
+          className="input-style"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
       </div>
       <div className="button-wrapper">
-      <button className="button-login" onClick={(e) => handleLogin(e)}>
-        LOGIN
-      </button>
-    </div>
-    <img className="companyphoto-loginpage" src={Logo} alt="image loading..."></img>
-    </div>
+        <button className="button-login" onClick={(e) => handleLogin(e)}>
+          LOGIN
+        </button>
+      </div>
+      <img
+        className="companyphoto-loginpage"
+        src={Logo}
+        alt="image loading..."
+      ></img>
+    </body>
   );
 }
 
