@@ -45,31 +45,37 @@ body {
 
 .loginbutton {
   position: relative;
-  font-size: 50px;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 3px;
   background-color: #900c27;
   color: white;
   bottom: 45%;
   height: 100px;
   width: 500px;
+  border: #900c27;
+  text-transform: uppercase;
 }
 
 .descriptionhomepage {
-  font-size: 60px;
+  font-size: 50px;
   color: #900c27;
   position: relative;
+  letter-spacing: 2px;
   top: 10%;
 }
 
 .registerbutton {
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 3px;
   position: relative;
   height: 100px;
   color: #900c27;
+  text-transform: uppercase;
   width: 500px;
   top: 20%;
-  font-weight: 800;
   background-color: #f6c667;
   border: none;
-  margin-top: 30px;;
-  /* outline:none; */
+  margin-top: 50px;
 }
