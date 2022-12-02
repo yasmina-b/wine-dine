@@ -1,47 +1,45 @@
-.input-style {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    width: 509px;
-    border-radius: 10px;
-    margin-top: 60px;
-    cursor: pointer;
-    font-size: 45px;
-  }
-  
-  .input-wrapper {
-  
-    display: flex;
-    justify-content: center;
-   
-    
-  }
-  
-  .button-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .button-login {
-    background-color: #900c27;
-    color: white;
-    padding: 25px;
-    font-size: 50px;
-    font-weight: 140;
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    margin-top:700px;
-    
-    font-family: 'Montserrat', sans-serif;
-  }
+.input-style-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 700px;
+  border-radius: 10px;
+  margin-top: 60px;
+  cursor: pointer;
+  font-size: 45px;
+  text-align: center;
+}
 
-  .companyphoto-loginpage{
-    display: flex;
-    width: 500px !important;
-    margin:auto
-  }
-  
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-login {
+  background-color: #900c27;
+  color: white;
+  padding: 25px;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  margin-top: 150px;
+  text-transform: uppercase;
+  border: #900c27;
+}
+
+.companyphoto-loginpage {
+  display: flex;
+  width: 500px !important;
+  margin: auto;
+}

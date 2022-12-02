@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./RegisterPage.css";
-import Logo from "../../photos/logo.png";
+import Navbar from "../../components/navbar/Navbar";
 
 function RegisterPage() {
   const navigate = useNavigate();
@@ -33,6 +33,7 @@ function RegisterPage() {
 
   return (
     <div>
+      <Navbar></Navbar>
       <div className="title">SIGN UP</div>
       <form>
         <div className="label-wrapper">
@@ -40,7 +41,7 @@ function RegisterPage() {
         </div>
         <div className="input-wrapper">
         <input
-          className="input-style"
+          className="input-style-register"
           type="text"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
@@ -51,7 +52,7 @@ function RegisterPage() {
         </div>
         <div className="input-wrapper">
         <input
-          className="input-style"
+          className="input-style-register"
           type="text"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
@@ -62,7 +63,7 @@ function RegisterPage() {
         </div>
         <div className="input-wrapper">
         <input
-          className="input-style"
+          className="input-style-register"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -73,7 +74,7 @@ function RegisterPage() {
         </div>
         <div className="input-wrapper">
         <input
-          className="input-style"
+          className="input-style-register"
           type="text"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
@@ -84,7 +85,7 @@ function RegisterPage() {
         </div>
         <div className="input-wrapper">
         <input
-          className="input-style"
+          className="input-style-register"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -93,7 +94,6 @@ function RegisterPage() {
         <div className="button-wrapper">
         <button className="button" onClick={(e) => handleRegister(e)}>Sign up</button>
         </div>
-        <img className="companyphoto-registerpage" src={Logo} alt="image loading..."></img>
       </form>
     </div>
   );

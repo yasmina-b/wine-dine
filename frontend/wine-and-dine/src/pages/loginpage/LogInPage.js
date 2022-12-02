@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import AuthContext from "../../context/AuthContext";
-import Logo from "../../photos/logo.png";
+import Navbar from "../../components/navbar/Navbar";
 
 function LogInPage() {
   const navigate = useNavigate();
@@ -32,13 +32,14 @@ function LogInPage() {
   };
   return (
     <body>
+      <Navbar></Navbar>
       <div className="title">LOGIN</div>
       <div className="label-wrapper">
         <label className="labels">Email</label>
       </div>
       <div className="input-wrapper">
         <input
-          className="input-style"
+          className="input-style-login"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -49,7 +50,7 @@ function LogInPage() {
       </div>
       <div className="input-wrapper">
         <input
-          className="input-style"
+          className="input-style-login"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -60,11 +61,6 @@ function LogInPage() {
           LOGIN
         </button>
       </div>
-      <img
-        className="companyphoto-loginpage"
-        src={Logo}
-        alt="image loading..."
-      ></img>
     </body>
   );
 }

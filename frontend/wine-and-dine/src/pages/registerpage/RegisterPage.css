@@ -1,6 +1,5 @@
 .register-page {
-  position:absolute;
-  background-color: #f6c667;
+  position: absolute;
   width: 100%;
   height: 100vh;
   background-attachment: fixed;
@@ -8,53 +7,48 @@
 
 .title {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 80px;
   font-weight: 36;
-  font-style: bold;
-  letter-spacing: 20px;
+  letter-spacing: 30px;
   color: #900c27;
   font-size: 100px;
-  font-family: 'Anonymous Pro', monospace;
 }
 
 .labels {
   color: #900c27;
   display: flex;
- 
   font-size: 50px;
-  font-weight: 14;
+  font-weight: 20;
   letter-spacing: 2px;
   margin-top: 50px;
-  font-family: 'Montserrat', sans-serif;
 }
 
-.label-wrapper{
+.label-wrapper {
   display: flex;
   justify-content: center;
   display: flex;
 }
 
-.input-style {
+.input-style-register {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: #900c27; */
   height: 70px;
-  width: 509px;
+  width: 700px;
   border-radius: 10px;
-  margin-top: 60px;
+  margin-top: 50px;
   cursor: pointer;
+  font-size: 45px;
+  text-align: center;
 }
 
 .input-wrapper {
-
   display: flex;
   justify-content: center;
-  
 }
 
-.button-wrapper{
+.button-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,19 +58,19 @@
   background-color: #900c27;
   color: white;
   padding: 25px;
-  font-size: 50px;
-  font-weight: 140;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 3px;
   display: flex;
   justify-content: center;
   width: 400px;
-  margin-top:80px;
-  
-  font-family: 'Montserrat', sans-serif;
+  margin-top: 150px;
+  text-transform: uppercase;
+  border: #900c27;
 }
 
-
- .companyphoto-registerpage{
+.companyphoto-registerpage {
   display: flex;
   width: 350px !important;
-  margin:auto;
+  margin: auto;
 }
