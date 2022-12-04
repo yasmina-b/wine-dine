@@ -1,0 +1,46 @@
+.background {
+  background-color: white;
+}
+
+.title-confirm {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 100px;
+  letter-spacing: 3px;
+}
+
+label {
+  font-size: 30px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+select {
+  display: flex;
+  justify-content: center;
+}
+
+option {
+  display: flex;
+  justify-content: center;
+}
+
+.button-design-confirm {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  padding: 30px;
+  width: 600px;
+  background-color: #900c27;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: #900c27;
+  display: flex;
+  justify-content: center;
+  margin-top: 260px;
+  cursor: pointer;
+}
