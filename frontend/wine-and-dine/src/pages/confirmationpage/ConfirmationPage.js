@@ -19,17 +19,20 @@ const ConfirmationPage = () => {
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
       />
       <Navbar></Navbar>
-      <div>
+      <div className="content-wrapper">
         <h1 className="title-confirm">Select your preferences:</h1>
         <label>Choose a date : </label>
         {!isShown && (
+          <div className="number-of-people-wrapper">
           <span class="material-symbols-outlined" onClick={handleClick}>
             calendar_month
           </span>
+          </div>
         )}
         {isShown && <Calendar></Calendar>}
         <label>Select the number of persons:</label>
-        <select>
+        <div className="number-of-people-wrapper">
+        <select className="number-of-people">
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -43,8 +46,10 @@ const ConfirmationPage = () => {
           <option>11</option>
           <option>12</option>
         </select>
+        </div>
         <label>Choose an hour</label>
-        <select>
+        <div className="choose-hour-wrapper">
+        <select className="choose-hour">
             <option>10:00-12:00</option>
             <option>12:00-14:00</option>
             <option>14:00-16:00</option>
@@ -52,12 +57,17 @@ const ConfirmationPage = () => {
             <option>18:00-20:00</option>
             <option>20:00-22:00</option>
         </select>
+        </div>
         <label>Where do you want to eat?</label>
-        <select>
+        <div className="select-location-wrapper">
+        <select className="select-location">
             <option>indoor</option>
             <option>outdoor</option>
         </select>
+        </div>
+        <div className="button-design-confirm-wrapper">
         <button className="button-design-confirm">Confirm your booking</button>
+      </div>
       </div>
       <MenuBar></MenuBar>
     </div>
