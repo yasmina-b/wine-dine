@@ -2,6 +2,10 @@
   background-color: white;
 }
 
+.content-wrapper{
+  max-height: 1500px;
+}
+
 .title-confirm {
   text-align: center;
   text-transform: uppercase;
@@ -43,4 +47,48 @@ option {
   justify-content: center;
   margin-top: 260px;
   cursor: pointer;
+}
+
+.button-design-confirm-wrapper{
+  display: flex;
+  justify-content:center
+}
+
+.number-of-people-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.number-of-people
+{
+  height:55px;
+  width: 100px;
+  font-size: 20px;
+  margin-top:49px;
+}
+
+.choose-hour-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.choose-hour{
+  height:55px;
+  width: 150px;
+  font-size: 20px;
+  margin-top:49px;
+  border-top:1px solid
+}
+
+.select-location-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.select-location{
+  height:55px;
+  width: 150px;
+  font-size: 40px;
+  margin-top:49px;
+  border-top:1px solid
 }
