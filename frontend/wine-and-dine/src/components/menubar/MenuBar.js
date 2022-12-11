@@ -1,7 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./MenuBar.css";
-
-
 
 const MenuBar = () => {
   return (
@@ -16,7 +15,9 @@ const MenuBar = () => {
             <span className="material-symbols-outlined">event</span>
           </div>
           <div className="center">
-            <span className="material-symbols-outlined">account_circle</span>
+            <Link to="/account">
+              <span className="material-symbols-outlined">account_circle</span>
+            </Link>
           </div>
           <div className="right">
             <span className="material-symbols-outlined">star</span>
