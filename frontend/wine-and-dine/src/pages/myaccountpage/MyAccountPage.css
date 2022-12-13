@@ -22,15 +22,27 @@
   width: 300px;
   height: 30px;
   font-size: 30px;
+  border: 1px solid black
 }
 
 .update-button {
   margin-top: 700px;
-  margin-left: 450px;
+  
   padding: 20px;
   width: 250px;
   font-size: 30px;
   letter-spacing: 4px;
   background-color: #900c27;
   color: white;
+}
+
+.input-box{
+  display:flex;
+  justify-content: center;
+ 
+}
+.updateButton{
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
