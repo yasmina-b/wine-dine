@@ -6,6 +6,7 @@ import MainPage from "./pages/mainpage/MainPage";
 import ConfirmationPage from "./pages/confirmationpage/ConfirmationPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyAccountPage from "./pages/myaccountpage/MyAccountPage";
+import FavoritesPage from "./pages/favoritespage/FavoritesPage";
 
 function AppRoutes() {
   return (
@@ -17,7 +18,7 @@ function AppRoutes() {
         <Route path="/restaurants" element={<MainPage/>}></Route>
         <Route path="/confirmation" element={<ConfirmationPage/>}></Route>
         <Route path="/account" element={<MyAccountPage/>}></Route>
-        
+        <Route path="/favorites" element={<FavoritesPage/>}></Route>  
       </Routes>
     </BrowserRouter>
   );
