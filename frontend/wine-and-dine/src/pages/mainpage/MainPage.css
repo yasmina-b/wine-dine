@@ -13,7 +13,7 @@
   margin: auto;
 }
 .input-style {
-  margin-top: 50px;
+  margin-top: 70px;
   height: 40px;
   width: 700px;
   padding: 10px;
@@ -35,20 +35,20 @@
 #search {
   padding: 10px;
   min-width: 40px;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .category-position {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 .category-card {
   display: inline-block;
   padding: 0 25px;
   height: 50px;
-  font-size: 27px;
+  font-size: 22px;
   line-height: 50px;
   color: white;
   background-color: #900c27;;

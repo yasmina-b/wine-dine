@@ -11,10 +11,10 @@ import { verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
 
 //CREATE
-router.post("/", verifyAdmin, createRestaurant);
+router.post("/", createRestaurant);
 
 //UPDATE
-router.put("/:id", verifyAdmin, updateRestaurant);
+router.put("/:id", updateRestaurant);
 
 //DELETE
 router.delete("/:id", verifyAdmin, deleteRestaurant);
