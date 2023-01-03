@@ -27,13 +27,59 @@ const RestaurantPage = () => {
 
   if (!restaurant) return <h1>Loading...</h1>;
 
+  
   return (
     <div className="main-page">
-      <Navbar></Navbar>
+      <div className="imageRestaurantPageWrapper">
+     <img className="imageRestaurantPage"src={restaurant.image}></img>
+     </div>
+
+      <div>
+      <button type="button" className="favoriteButton"></button>
+      </div>
+
+      <div>
+      <button type="button" className="backButton"></button>
+      </div>
+
+      <div className="nameRestaurantPage">
       <h3>{restaurant.name}</h3>
+      </div>
+
+      <div className="categoryRestaurantPage">
       <h2>{restaurant.category}</h2>
-      <button>BOOK A TABLE</button>
-      <MenuBar></MenuBar>
+      </div>
+
+      <div className="scheduleCostRestaurantPage">
+      <h2>Open: {restaurant.schedule} </h2>
+      </div>
+
+      <div className="ratingRestaurantPage">
+      <h2>Rating: {restaurant.rating}</h2>
+      </div>
+
+      <div className="averageCostRestaurantPage">
+      <h2>Average Cost: {restaurant.averageCost} lei for 2 people</h2>
+      </div>
+
+      <div className="ButtonWrapper">
+        <button type="button" className="websiteButton"></button>
+        <button type="button" className="menuButton"></button>
+        <button type="button" className="mapsButton"></button>
+      </div>
+
+      <div className="TextWrapper">
+        <h2  className="websiteText">View website</h2>
+        <h2  className="websiteText">Menu</h2>
+        <h2  className="websiteText">Go to Maps</h2>
+      </div>
+     
+      
+      <div className="bookButtonWrapper">
+      <button className="bookButton">BOOK A TABLE</button>
+      </div>
+      {/* <div className="poitionMenuBar"><MenuBar></MenuBar></div> */}
+      
     </div>
   );
 };
