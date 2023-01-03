@@ -33,6 +33,7 @@ const RestaurantPage = () => {
       <h3>{restaurant.name}</h3>
       <h2>{restaurant.category}</h2>
       <button>BOOK A TABLE</button>
+      <button>ADD TO WISHLIST</button>
       <MenuBar></MenuBar>
     </div>
   );

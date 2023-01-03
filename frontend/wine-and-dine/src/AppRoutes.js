@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyAccountPage from "./pages/myaccountpage/MyAccountPage";
 import FavoritesPage from "./pages/favoritespage/FavoritesPage";
 import RestaurantPage from "./pages/restaurantpage/RestaurantPage";
+import WishlistPage from "./pages/wishlistpage/WishlistPage";
 
 function AppRoutes() {
   return (
@@ -21,6 +22,7 @@ function AppRoutes() {
         <Route path="/account" element={<MyAccountPage/>}></Route>
         <Route path="/favorites" element={<FavoritesPage/>}></Route>
         <Route path="/restaurants/:id" element={<RestaurantPage/>}></Route>
+        <Route path="/wishlist" element={<WishlistPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );
