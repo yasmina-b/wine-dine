@@ -20,7 +20,9 @@ const MenuBar = () => {
             </Link>
           </div>
           <div className="right">
-            <span className="material-symbols-outlined">star</span>
+            <Link to="/wishlist">
+              <span className="material-symbols-outlined">star</span>
+            </Link>
           </div>
         </div>
       </div>
