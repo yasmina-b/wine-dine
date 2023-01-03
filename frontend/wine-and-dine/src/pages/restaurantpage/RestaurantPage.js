@@ -48,6 +48,7 @@ const RestaurantPage = () => {
 
       <div className="categoryRestaurantPage">
       <h2>{restaurant.category}</h2>
+
       </div>
 
       <div className="scheduleCostRestaurantPage">
@@ -80,6 +81,7 @@ const RestaurantPage = () => {
       </div>
       {/* <div className="poitionMenuBar"><MenuBar></MenuBar></div> */}
       
+
     </div>
   );
 };

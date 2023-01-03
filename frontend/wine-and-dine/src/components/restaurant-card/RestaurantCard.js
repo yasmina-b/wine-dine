@@ -9,11 +9,14 @@ const RestaurantCard = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [categories, setCategories] = useState([]);
+  const [filteredRestaurantsByCategory, setFiltredRestaurantsByCategory] =
+    useState([]);
 
   const getRestaurants = async () => {
     try {
       const response = await axios.get("http://localhost:8800/api/restaurants");
       setRestaurants(response.data);
+      setFiltredRestaurantsByCategory(response.data);
     } catch (err) {
       console.error(err);
     }
@@ -33,15 +36,24 @@ const RestaurantCard = () => {
     getCategories();
   }, []);
 
-  const getFilteredRestaurants = () => {
-    if (!searchValue) return restaurants;
-    return restaurants.filter(
-      (restaurant) =>
-        restaurant.name.toLowerCase() === searchValue.toLowerCase()
-    );
-  };
+  useEffect(() => {
+    if (searchValue) {
+      const res = restaurants.filter((restaurant) =>
+        restaurant.name.toLowerCase().includes(searchValue.toLowerCase())
+      );
+      setFiltredRestaurantsByCategory(res);
+    } else {
+      setFiltredRestaurantsByCategory(restaurants);
+    }
+    console.log(searchValue);
+  }, [searchValue, restaurants]);
 
-  const filteredRestaurants = getFilteredRestaurants();
+  const filterByCategory = (category) => {
+    const result = restaurants.filter((currCategory) => {
+      return currCategory.category === category;
+    });
+    setFiltredRestaurantsByCategory(result);
+  };
 
   return (
     <div>
@@ -62,13 +74,24 @@ const RestaurantCard = () => {
         </div>
       </div>
       <div className="category-position">
+        <li
+          className="category-card"
+          onClick={() => setFiltredRestaurantsByCategory(restaurants)}
+        >
+          ALL
+        </li>
         {categories &&
           categories.map((category) => (
-            <li className="category-card">{category.name}</li>
+            <li
+              className="category-card"
+              onClick={() => filterByCategory(category.name)}
+            >
+              {category.name}
+            </li>
           ))}
       </div>
-      {filteredRestaurants &&
-        filteredRestaurants.map((restaurant) => (
+      {filteredRestaurantsByCategory &&
+        filteredRestaurantsByCategory.map((restaurant) => (
           <div className="card-position">
             <div className="card">
               <div className="card-left">
