@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import MenuBar from "../../components/menubar/MenuBar";
 import Navbar from "../../components/navbar/Navbar";
 import "./MyAccountPage.css";
+import Back from "../../photos/back-arrow.png";
+import { Link } from "react-router-dom";
 
 
 const MyAccountPage = () => {
@@ -29,7 +30,7 @@ const MyAccountPage = () => {
   return (
     <div className="account-page">
       <Navbar></Navbar>
-      <div className="account-title">MY ACCOUNT</div>
+      <h2 className="account-title">MY ACCOUNT INFO</h2>
       <div className="input-alignment">
         <label>First Name</label>
         <div className="input-box">
