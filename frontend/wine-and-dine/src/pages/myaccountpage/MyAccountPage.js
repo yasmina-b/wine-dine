@@ -4,6 +4,7 @@ import MenuBar from "../../components/menubar/MenuBar";
 import Navbar from "../../components/navbar/Navbar";
 import "./MyAccountPage.css";
 
+
 const MyAccountPage = () => {
   const [users, setUsers] = useState([]);
 
@@ -68,7 +69,7 @@ const MyAccountPage = () => {
           </button>
         </div>
       </div>
-      <MenuBar></MenuBar>
+      {/* <MenuBar></MenuBar> */}
     </div>
   );
 };

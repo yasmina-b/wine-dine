@@ -14,22 +14,29 @@ const WishlistPage = () => {
   };
 
   return (
-    <div className="main-page">
+    <div className="main-pageWish">
       <Navbar></Navbar>
+      <div className="wishlistTitle">
       <h1>MY WISHLIST</h1>
+      </div>
+
       <div>
         {wishlist.map((restaurant, index) => {
           return (
-            <div>
-              <div>{restaurant.name}</div>
-              <button onClick={() => removeItemFromWishlist(index)}>
+            <div className="listWish">
+               <div className="wrap">
+              <div className="imageWishWrapper"><img className="imageWish"src={restaurant.image} alt=""></img></div>
+              <div className="wishlistRestaurantName">{restaurant.name}</div>
+              </div>
+              <button className="btnWishList" onClick={() => removeItemFromWishlist(index)}>
                 DELETE
               </button>
+              
             </div>
           );
         })}
       </div>
-      <MenuBar></MenuBar>
+     
     </div>
   );
 };

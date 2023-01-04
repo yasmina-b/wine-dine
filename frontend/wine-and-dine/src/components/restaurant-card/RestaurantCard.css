@@ -10,6 +10,7 @@
   width: 790px;
   background-color: #f6c667;
   padding: 40px 20px 5px 25px;
+  border-radius: 15px;
 }
 
 .card-left {
@@ -50,4 +51,5 @@
   cursor: pointer;
   text-transform: uppercase;
   border: #900c27;
+  border-radius: 15px;
 }

@@ -3,6 +3,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./RestaurantPage.css";
 import AuthContext from "../../context/AuthContext";
+import WebImg from "../../photos/web.png";
+import MenuImg from "../../photos/menu.png";
+import MapImg from "../../photos/1.png";
+import StarImg from "../../photos/star.png";
 
 const RestaurantPage = () => {
   const {id} = useParams();
@@ -31,17 +35,23 @@ const RestaurantPage = () => {
   }
 
   return (
+    <div>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <div className="main-page">
       <div className="imageRestaurantPageWrapper">
         <img className="imageRestaurantPage" src={restaurant.image} alt=""></img>
       </div>
 
       <div>
-        <button type="button" className="favoriteButton" onClick={() => handleAddRestaurant(restaurant)}></button>
+        <button type="button"  className="favoriteButton" onClick={() => handleAddRestaurant(restaurant)}><img className="webImg"src={StarImg}></img></button>
+        
       </div>
 
       <div>
         <button type="button" className="backButton"></button>
+        <span className="backArrow">&#8592;</span>
       </div>
 
       <div className="nameRestaurantPage">
@@ -65,9 +75,10 @@ const RestaurantPage = () => {
       </div>
 
       <div className="ButtonWrapper">
-        <button type="button" className="websiteButton"></button>
-        <button type="button" className="menuButton"></button>
-        <button type="button" className="mapsButton"></button>
+        <button type="button" className="websiteButton"><img className="webImg"src={WebImg}></img></button>
+        <button type="button" className="menuButton"><img className="webImg"src={MenuImg}></img></button>
+        
+        <button type="button" className="mapsButton"><img className="webImg"src={MapImg}></img></button>
       </div>
 
       <div className="TextWrapper">
@@ -80,6 +91,7 @@ const RestaurantPage = () => {
         <button className="bookButton">BOOK A TABLE</button>
       </div>
       {/* <div className="poitionMenuBar"><MenuBar></MenuBar></div> */}
+    </div>
     </div>
   );
 };

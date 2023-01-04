@@ -12,6 +12,7 @@
     /* margin-top: 100px; */
     font-size: 80px;
     margin-left: 50px;
+    margin-top: -287px;
 }
 .categoryRestaurantPage{
     position: relative;
@@ -101,34 +102,56 @@
     width: 560px;
     align-items: center;
     border-radius: 14px;
+    margin-bottom: 270px;
     
 }
 
 
 .favoriteButton{
-    position: absolute;
-    bottom: 1263px;
-    right:20px;
+    position: relative;
+    bottom:100px;
+    left:690px;
     width: 160px;
     height: 160px;
     border-radius: 50%;
     margin-left: 120px;
-    padding:0px
+    padding:0px;
+    
 }
 
 .backButton{
-    position: absolute;
-    bottom: 1990px;
+    position: relative;
+    bottom:900px;
     background-color: #f6c667;
     left:10px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-right: 120px;
-    padding:0px
+    padding:0px;
+    cursor: pointer;
+}
+.backArrow{
+    position: relative;
+    bottom: 920px;
+    right:21%;
+    font-size: 100px;
+    cursor: pointer;
 }
 
 .poitionMenuBar{
     
     top:1000px;
 }
+
+.webImg{
+    background-size: fill;
+    position: relative;
+    font-size: 30px;
+    height: 80px;
+}
+
+.websiteButton{
+    background-size: fill;
+}
+
