@@ -1,157 +1,167 @@
-.imageRestaurantPage{
-    width:100%;
-    height:100%;
+.imageRestaurantPage {
+  width: 100%;
+  height: 100%;
 }
 
-.imageRestaurantPageWrapper
-{
-    height:753px;
+.imageRestaurantPageWrapper {
+  height: 753px;
 }
 
-.nameRestaurantPage{
-    /* margin-top: 100px; */
-    font-size: 80px;
-    margin-left: 50px;
-    margin-top: -287px;
+.nameRestaurantPage {
+  font-size: 70px;
+  margin-left: 50px;
+  margin-top: -287px;
 }
-.categoryRestaurantPage{
-    position: relative;
-    margin-left: 100px;
-    font-size: 25px;
-    bottom:70px;
-    color: rgb(101, 101, 101);
-}
-
-.scheduleCostRestaurantPage{
-    position: relative;
-    margin-left: 50px;
-    font-size: 25px;
-    color: rgb(101, 101, 101);
+.categoryRestaurantPage {
+  position: relative;
+  margin-left: 100px;
+  font-size: 25px;
+  bottom: 70px;
+  color: rgb(101, 101, 101);
 }
 
-.ratingRestaurantPage{
-    position: relative;
-    margin-left: 50px;
-    font-size: 25px;
-    color: rgb(101, 101, 101);
+.scheduleCostRestaurantPage {
+  position: relative;
+  margin-left: 50px;
+  font-size: 25px;
+  color: rgb(101, 101, 101);
 }
 
-.averageCostRestaurantPage{
-    position: relative;
-    margin-left: 50px;
-    font-size: 25px;
-    color: rgb(101, 101, 101);
+.ratingRestaurantPage {
+  position: relative;
+  margin-left: 50px;
+  font-size: 25px;
+  color: rgb(101, 101, 101);
 }
 
-.ButtonWrapper{
-    display: flex;
-    margin-top: 150px;
+.averageCostRestaurantPage {
+  position: relative;
+  margin-left: 50px;
+  font-size: 25px;
+  color: rgb(101, 101, 101);
 }
 
-.websiteButton{
-    position: relative;
-    display: inline-block;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin-left: 120px;
-    padding:0px
-}
-.mapsButton{
-    position: relative;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin-left: 120px;
-    padding:0px
+.ButtonWrapper {
+  display: flex;
+  margin-top: 150px;
 }
 
-.menuButton{
-    position: relative;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin-left: 120px;
-    padding:0px
+.websiteButton {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #f6c667;
+  border: #f6c667;
+  margin-left: 120px;
+  padding: 0px;
+}
+.mapsButton {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #f6c667;
+  border: #f6c667;
+  margin-left: 120px;
+  padding: 0px;
 }
 
-.TextWrapper{
-    display:flex
+.menuButton {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #f6c667;
+  border: #f6c667;
+  margin-left: 120px;
+  padding: 0px;
 }
 
-.websiteText{
-    font-size: 39px;
-    position: relative;
-    margin-left: 100px;
-    color: rgb(101, 101, 101);
+.TextWrapper {
+  display: flex;
 }
 
-.bookButtonWrapper{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
+.websiteText {
+  font-size: 39px;
+  position: relative;
+  margin-left: 90px;
+  color: rgb(101, 101, 101);
 }
 
-.bookButton{
-    position: relative;
-    background-color: #900c27;
-    color:white;
-    font-weight: bold;
-    font-size: 40px;
-    height: 130px;
-    width: 560px;
-    align-items: center;
-    border-radius: 14px;
-    margin-bottom: 270px;
-    
+.bookButtonWrapper {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  height: 200px;
 }
 
-
-.favoriteButton{
-    position: relative;
-    bottom:100px;
-    left:690px;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin-left: 120px;
-    padding:0px;
-    
+.bookButton {
+  position: relative;
+  background-color: #900c27;
+  color: white;
+  font-weight: bold;
+  font-size: 38px;
+  height: 130px;
+  width: 550px;
+  align-items: center;
+  border-radius: 14px;
+  margin-bottom: 270px;
 }
 
-.backButton{
-    position: relative;
-    bottom:900px;
-    background-color: #f6c667;
-    left:10px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 120px;
-    padding:0px;
-    cursor: pointer;
-}
-.backArrow{
-    position: relative;
-    bottom: 920px;
-    right:21%;
-    font-size: 100px;
-    cursor: pointer;
+.favoriteButton {
+  position: relative;
+  bottom: 100px;
+  left: 690px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-left: 120px;
+  padding: 0px;
+  background-color: #f6c667;
+  border: #f6c667;
 }
 
-.poitionMenuBar{
-    
-    top:1000px;
+.backButton {
+  position: relative;
+  bottom: 900px;
+  background-color: #f6c667;
+  border: #f6c667;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 120px;
+  padding: 0px;
+  cursor: pointer;
+}
+.backArrow {
+  position: relative;
+  bottom: 930px;
+  margin-left: 20px;
+  margin-top: 20px;
+  right: 21%;
+  font-size: 100px;
+  cursor: pointer;
 }
 
-.webImg{
-    background-size: fill;
-    position: relative;
-    font-size: 30px;
-    height: 80px;
+.backArrow img {
+  height: 500px;
 }
 
-.websiteButton{
-    background-size: fill;
+.poitionMenuBar {
+  top: 1000px;
 }
 
+.webImg {
+  background-size: fill;
+  position: relative;
+  font-size: 30px;
+  height: 80px;
+  background-color: #f6c667;
+}
+
+.websiteButton {
+  background-size: fill;
+}

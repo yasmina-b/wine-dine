@@ -1,8 +1,6 @@
 .account-page {
   background-color: white;
   min-height: auto;
-  
- 
 }
 
 .account-title {
@@ -10,7 +8,7 @@
   font-size: 50px;
   letter-spacing: 10px;
   color: #900c27;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .input-alignment {
@@ -22,38 +20,38 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  width: 400px;
+  width: 500px;
   height: 80px;
   font-size: 50px;
-  border: 1px solid black
+  border: 1px solid black;
+  text-align: center;
 }
 
-.input-design::placeholder{
+.input-design::placeholder {
   font-size: 130px;
 }
 
 .update-button {
-  
   position: relative;
-  padding: 20px;
-  width: 480px;
-  height: 120px;
-  font-size: 50px;
-  border-radius: 15px;
-  letter-spacing: 4px;
   background-color: #900c27;
   color: white;
+  font-weight: bold;
+  font-size: 38px;
+  height: 130px;
+  width: 550px;
+  align-items: center;
+  border-radius: 14px;
+  margin-bottom: 80px;
 }
 
-.input-box{
-  display:flex;
+.input-box {
+  display: flex;
   justify-content: center;
- 
 }
-.updateButton{
-  min-height: 920px;
-  max-height:1100px ;
-  display:flex;
+.updateButton {
+  min-height: 650px;
+  max-height: 1100px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
