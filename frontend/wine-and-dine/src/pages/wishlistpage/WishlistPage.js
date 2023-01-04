@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import MenuBar from "../../components/menubar/MenuBar";
 import Navbar from "../../components/navbar/Navbar";
 import AuthContext from "../../context/AuthContext";
@@ -6,6 +7,7 @@ import "./WishlistPage.css";
 
 const WishlistPage = () => {
   const { wishlist, customSetWishlist } = React.useContext(AuthContext);
+  const navigate = useNavigate();
 
   const removeItemFromWishlist = (index) => {
     const newWishlist = [...wishlist];
@@ -17,26 +19,30 @@ const WishlistPage = () => {
     <div className="main-pageWish">
       <Navbar></Navbar>
       <div className="wishlistTitle">
-      <h1>MY WISHLIST</h1>
+        <h2> MY FAVORITES LIST</h2>
       </div>
-
-      <div>
-        {wishlist.map((restaurant, index) => {
-          return (
-            <div className="listWish">
-               <div className="wrap">
-              <div className="imageWishWrapper"><img className="imageWish"src={restaurant.image} alt=""></img></div>
-              <div className="wishlistRestaurantName">{restaurant.name}</div>
+      {wishlist.map((restaurant, index) => {
+        return (
+          <div className="card-position-fav">
+            <div className="card-fav">
+              <div className="card-left-fav">
+                <img src={restaurant.image} alt=""></img>
               </div>
-              <button className="btnWishList" onClick={() => removeItemFromWishlist(index)}>
-                DELETE
-              </button>
-              
+              <div className="card-right-fav">
+                <h2 className="restaurant-name-fav">{restaurant.name}</h2>
+                <button
+                  className="button-design-fav"
+                  onClick={() => removeItemFromWishlist(index)}
+                >
+                  REMOVE
+                </button>
+                <button className="button-design-fav-rem"
+                 onClick={() => navigate(`/restaurants/${restaurant._id}`)}>BOOK NOW</button>
+              </div>
             </div>
-          );
-        })}
-      </div>
-     
+          </div>
+        );
+      })}
     </div>
   );
 };

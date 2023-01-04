@@ -1,62 +1,84 @@
-.wishlistTitle{
-   font-size:50px;
-   text-align: center;
-   letter-spacing: 10px;
-   color: #900c27;
-   /* margin-bottom: 80px; */
+.wishlistTitle {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 10px;
+  color: #900c27;
+  margin-top: 50px;
 }
 
-.main-pageWish{
-    min-height: 2150px;
-    background-color:white;
+.main-pageWish {
+  min-height: 2150px;
+  background-color: white;
 }
 
-.wishlistRestaurantName
-{
-    font-size:50px;
-    margin-left:50px;
-    text-align: center;
-    margin-top: 80px;
+.card-position-fav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.listWish
-{
-    align-items: center;
-    justify-content: center;
+.card-fav {
+  margin-top: 120px;
+  height: 290px;
+  width: 790px;
+  background-color: #f6c667;
+  padding: 40px 20px 5px 25px;
+  border-radius: 15px;
+}
+
+.card-left-fav {
+  height: 250px;
+  width: 375px;
+  left: 0;
+}
+
+.card-left-fav img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-right-fav {
+  float: right;
+  margin-top: -285px;
+  margin-right: 50px;
+  width: 290px;
+  text-align: center;
+  justify-content: center;
+}
+
+.restaurant-name-fav {
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: 650;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.button-design-fav {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 15px;
+  margin-top: 10px;
+  width: 250px;
+  background-color: #900c27;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: #900c27;
+  border-radius: 15px;
+}
+
+.button-design-fav-rem {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 15px;
     margin-top: 10px;
-    margin-bottom:50px;
-    margin-left:8%;
-    height: 440px;
-    width: 850px;
-    background-color: #f6c667;
+    width: 250px;
+    background-color: rgb(49, 107, 82);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: #900c27;
     border-radius: 15px;
-}
-.btnWishList{
-    /* position: relative; */
-    height: 60px;
-    width: 200px;
-    font-size: 30px;
-    margin-top:0%;
-    margin-left: 69%;
-    background-color: #900c27;
-    color:white;
-    border-radius:15px;
-}
-
-.positionMenuBar{
-    position: sticky;
-    margin-top:166%
-}
-
-.imageWishWrapper{
-
-}
-.imageWish{
-    height:320px;
-    margin-top: 30px;
-    margin-left: 20px;
-}
-
-.wrap{
-    display:flex
-}
+  }
