@@ -18,7 +18,7 @@ function AppRoutes() {
         <Route path="/login" element={<LogInPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/restaurants" element={<MainPage/>}></Route>
-        <Route path="/confirmation" element={<ConfirmationPage/>}></Route>
+        <Route path="/restaurants/alltables/:id" element={<ConfirmationPage/>}></Route>
         <Route path="/account" element={<MyAccountPage/>}></Route>
         <Route path="/favorites" element={<FavoritesPage/>}></Route>
         <Route path="/restaurants/:id" element={<RestaurantPage/>}></Route>

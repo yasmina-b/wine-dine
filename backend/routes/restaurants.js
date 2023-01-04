@@ -4,6 +4,7 @@ import {
   deleteRestaurant,
   getRestaurant,
   getRestaurants,
+  getRestaurantTables,
   updateRestaurant,
 } from "../controllers/restaurant.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
@@ -24,5 +25,7 @@ router.get("/:id", getRestaurant);
 
 //GET ALL
 router.get("/", getRestaurants);
+router.get("/alltables/:id", getRestaurantTables);
+
 
 export default router;
