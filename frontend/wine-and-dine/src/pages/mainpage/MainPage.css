@@ -3,7 +3,7 @@
 }
 .main-page {
   background-color: white;
-  /* height: 2000px; */
+  height: 100%;
 }
 .alignment {
   display: flex;

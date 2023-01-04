@@ -1,0 +1,62 @@
+.wishlistTitle{
+   font-size:50px;
+   text-align: center;
+   letter-spacing: 10px;
+   color: #900c27;
+   /* margin-bottom: 80px; */
+}
+
+.main-pageWish{
+    min-height: 2150px;
+    background-color:white;
+}
+
+.wishlistRestaurantName
+{
+    font-size:50px;
+    margin-left:50px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.listWish
+{
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom:50px;
+    margin-left:8%;
+    height: 440px;
+    width: 850px;
+    background-color: #f6c667;
+    border-radius: 15px;
+}
+.btnWishList{
+    /* position: relative; */
+    height: 60px;
+    width: 200px;
+    font-size: 30px;
+    margin-top:0%;
+    margin-left: 69%;
+    background-color: #900c27;
+    color:white;
+    border-radius:15px;
+}
+
+.positionMenuBar{
+    position: sticky;
+    margin-top:166%
+}
+
+.imageWishWrapper{
+
+}
+.imageWish{
+    height:320px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.wrap{
+    display:flex
+}

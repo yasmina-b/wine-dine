@@ -1,12 +1,17 @@
 .container2 {
-  height: 10px;
+  position:sticky;
+  height: 100px;
+  background-color:  #f6c667;
+  margin-top: 200px;
+  
+  align-items: center;
+  justify-content: space-between;
 
-  background-color: #f6c667;
-  margin-top: 230px;
 }
 
 .wrapper2 {
   padding: 10px 20px;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
