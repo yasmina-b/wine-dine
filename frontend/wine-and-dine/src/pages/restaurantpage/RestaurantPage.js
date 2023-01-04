@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./RestaurantPage.css";
 import AuthContext from "../../context/AuthContext";
 
 const RestaurantPage = () => {
   const {id} = useParams();
+  const navigate = useNavigate();
   const [restaurant, setRestaurant] = useState({});
   const {wishlist, customSetWishlist} = React.useContext(AuthContext);
 
@@ -77,7 +78,7 @@ const RestaurantPage = () => {
       </div>
 
       <div className="bookButtonWrapper">
-        <button className="bookButton">BOOK A TABLE</button>
+        <button className="bookButton" onClick={() => navigate(`/restaurants/alltables/${restaurant._id}`)}>BOOK A TABLE</button>
       </div>
       {/* <div className="poitionMenuBar"><MenuBar></MenuBar></div> */}
     </div>
