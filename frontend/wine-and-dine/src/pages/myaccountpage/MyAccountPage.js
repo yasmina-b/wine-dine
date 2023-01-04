@@ -11,6 +11,8 @@ const MyAccountPage = () => {
     e.preventDefault();
     try {
       await axios.put(`http://localhost:8800/api/users/${users._id}`, users);
+      setUsers(users);
+      localStorage.setItem("user",JSON.stringify(users));
     } catch (err) {
       console.error(err);
     }
