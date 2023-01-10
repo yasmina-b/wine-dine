@@ -23,7 +23,7 @@ const WishlistPage = () => {
       </div>
       {wishlist.map((restaurant, index) => {
         return (
-          <div className="card-position-fav">
+          <div className="card-position-fav" key={index}>
             <div className="card-fav">
               <div className="card-left-fav">
                 <img src={restaurant.image} alt=""></img>

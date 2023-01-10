@@ -8,6 +8,7 @@ import userRoute from "./routes/users.js";
 import restaurantRoute from "./routes/restaurants.js"
 import categoryRoute from "./routes/categories.js"
 import tableRoute from "./routes/tables.js"
+import reservationRoute from "./routes/reservations.js"
 
 const app = express();
 dotenv.config();
@@ -43,6 +44,7 @@ app.use("/api/users", userRoute);
 app.use("/api/restaurants", restaurantRoute);
 app.use("/api/categories", categoryRoute);
 app.use("/api/tables", tableRoute);
+app.use("/api/reservations", reservationRoute);
 
 app.listen(8800, () => {
   connect();

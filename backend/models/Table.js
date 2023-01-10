@@ -13,7 +13,7 @@ const TableSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  tableNumber: [{ number: Number, unavailableDates: { type: [Date] }}],
+  // tableNumber: [{ number: Number, unavailableDates: { type: [Date] }}],
 });
 
 export default mongoose.model("Table", TableSchema);
