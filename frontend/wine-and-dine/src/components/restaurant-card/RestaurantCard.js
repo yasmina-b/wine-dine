@@ -45,7 +45,6 @@ const RestaurantCard = () => {
     } else {
       setFiltredRestaurantsByCategory(restaurants);
     }
-    console.log(searchValue);
   }, [searchValue, restaurants]);
 
   const filterByCategory = (category) => {
@@ -81,10 +80,11 @@ const RestaurantCard = () => {
           ALL
         </li>
         {categories &&
-          categories.map((category) => (
+          categories.map((category, index) => (
             <li
               className="category-card"
               onClick={() => filterByCategory(category.name)}
+              key={index}
             >
               {category.name}
             </li>

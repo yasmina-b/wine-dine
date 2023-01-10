@@ -3,12 +3,13 @@ import HomePage from "./pages/homepage/HomePage";
 import LogInPage from "./pages/loginpage/LogInPage";
 import RegisterPage from "./pages/registerpage/RegisterPage";
 import MainPage from "./pages/mainpage/MainPage";
-import ConfirmationPage from "./pages/confirmationpage/ConfirmationPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyAccountPage from "./pages/myaccountpage/MyAccountPage";
 import FavoritesPage from "./pages/favoritespage/FavoritesPage";
 import RestaurantPage from "./pages/restaurantpage/RestaurantPage";
 import WishlistPage from "./pages/wishlistpage/WishlistPage";
+import RestaurantTables from "./pages/tablespage/RestaurantTables";
+import ReservationPage from "./pages/reservationpage/ReservationPage";
 
 function AppRoutes() {
   return (
@@ -18,11 +19,12 @@ function AppRoutes() {
         <Route path="/login" element={<LogInPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/restaurants" element={<MainPage/>}></Route>
-        <Route path="/restaurants/alltables/:id" element={<ConfirmationPage/>}></Route>
+        <Route path="/restaurants/alltables/:id" element={<RestaurantTables/>}></Route>
         <Route path="/account" element={<MyAccountPage/>}></Route>
         <Route path="/favorites" element={<FavoritesPage/>}></Route>
         <Route path="/restaurants/:id" element={<RestaurantPage/>}></Route>
         <Route path="/wishlist" element={<WishlistPage/>}></Route>
+        <Route path="/reservation/:id" element={<ReservationPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );

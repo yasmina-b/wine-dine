@@ -62,12 +62,12 @@ const RestaurantPage = () => {
         <div>
           <button type="button" className="backButton"></button>
           <Link to="/restaurants">
-           <img className="backArrow" src={Back}></img>
+           <img className="backArrow" src={Back} alt=""></img>
           </Link>
         </div>
 
         <div className="nameRestaurantPage">
-          <h3>{restaurant.name}</h3>
+          <h3 key={restaurant._id}>{restaurant.name}</h3>
         </div>
 
         <div className="categoryRestaurantPage">
@@ -89,17 +89,17 @@ const RestaurantPage = () => {
         <div className="ButtonWrapper">
           <a href={restaurant.website}>
             <button type="button" className="websiteButton">
-              <img className="webImg" src={WebImg}></img>
+              <img className="webImg" src={WebImg} alt=""></img>
             </button>
           </a>
           <a href={restaurant.menu}>
             <button type="button" className="menuButton">
-              <img className="webImg" src={MenuImg}></img>
+              <img className="webImg" src={MenuImg} alt=""></img>
             </button>
           </a>
           <a href={restaurant.maps}>
             <button type="button" className="mapsButton">
-              <span class="material-symbols-outlined">location_on</span>
+              <span className="material-symbols-outlined">location_on</span>
             </button>
           </a>
         </div>
@@ -113,7 +113,8 @@ const RestaurantPage = () => {
         <div className="bookButtonWrapper">
           <button
             className="bookButton"
-            onClick={() => navigate(`/restaurants/alltables/${restaurant._id}`)}
+            // onClick={() => navigate(`/restaurants/alltables/${restaurant._id}`)}
+            onClick={() => navigate(`/reservation/${restaurant._id}`)}
           >
             BOOK A TABLE
           </button>

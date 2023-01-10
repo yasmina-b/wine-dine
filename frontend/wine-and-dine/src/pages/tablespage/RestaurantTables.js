@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./ConfirmationPage.css";
+import "./RestaurantTables.css";
 import Navbar from "../../components/navbar/Navbar";
 import "react-calendar/dist/Calendar.css";
 import MenuBar from "../../components/menubar/MenuBar";
 import { useParams } from "react-router-dom";
 
-const ConfirmationPage = () => {
+const RestaurantTables = () => {
   const { id } = useParams();
   const [allTables, setAllTables] = useState([]);
 
@@ -36,8 +36,8 @@ const ConfirmationPage = () => {
       <Navbar></Navbar>
       <h1>Select your table:</h1>
       {allTables &&
-        allTables.map((table) => (
-          <div>
+        allTables.map((table, index) => (
+          <div key={index}>
             <h1>{table.name}</h1>
             <h1>capacity : {table.capacity}</h1>
             <h1>location : {table.location}</h1>
@@ -49,4 +49,4 @@ const ConfirmationPage = () => {
   );
 };
 
-export default ConfirmationPage;
+export default RestaurantTables;
