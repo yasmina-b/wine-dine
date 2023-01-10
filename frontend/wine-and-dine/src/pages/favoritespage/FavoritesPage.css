@@ -1,0 +1,16 @@
+.account-page {
+    background-color: white;
+    min-height: auto;
+  }
+  
+  .account-title {
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 10px;
+    color: #900c27;
+    margin-top: 150px;
+  }
+  
+  .input-alignment {
+    margin-top: 50px;
+  }
