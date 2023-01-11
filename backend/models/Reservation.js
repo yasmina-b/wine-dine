@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const ReservationSchema = new mongoose.Schema({
   date: {
-    type: String,
+    type: Date,
     required: true,
   },
   hour: {
@@ -13,6 +13,7 @@ const ReservationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  
 });
 
 export default mongoose.model("Reservation", ReservationSchema);

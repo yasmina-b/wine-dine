@@ -16,6 +16,6 @@ const RestaurantSchema = new mongoose.Schema({
   menu: { type: String },
   maps: { type: String },
   tables: [ { type: Table.schema }],
-  reservations: [ { type: Reservation.schema } ],
+  // reservations: [ { type: Reservation.schema } ],
 });
 export default mongoose.model("Restaurant", RestaurantSchema);

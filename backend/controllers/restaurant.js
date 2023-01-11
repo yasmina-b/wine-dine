@@ -1,3 +1,4 @@
+import Reservation from "../models/Reservation.js";
 import Restaurant from "../models/Restaurant.js";
 import Table from "../models/Table.js";
 
@@ -60,3 +61,24 @@ export const getRestaurantTables = async (req, res, next) => {
     next(err);
   }
 };
+
+export const  getAvailableTables = async (req, res, next) => {
+  try{
+    const restaurant = await Restaurant.findById(req.params.id);
+    //const date = req.params.date;
+    //const hour=req.params.hour;
+    const reservationList = await Promise.all(
+      restaurant.reservations.map((reservation) => {
+        return Reservation.findById(reservation)
+      })
+    )
+
+    res.status(200).json(reservationList);
+
+   return restaurant;
+
+
+  }catch(err){
+    next(err);
+  }
+}

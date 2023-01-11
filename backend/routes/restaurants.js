@@ -2,6 +2,7 @@ import express from "express";
 import {
   createRestaurant,
   deleteRestaurant,
+  getAvailableTables,
   getRestaurant,
   getRestaurants,
   getRestaurantTables,
@@ -26,6 +27,7 @@ router.get("/:id", getRestaurant);
 //GET ALL
 router.get("/", getRestaurants);
 router.get("/alltables/:id", getRestaurantTables);
+router.get("/availableTables/:id", getAvailableTables);
 
 
 export default router;

@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import Reservation from "./Reservation.js";
+
 
 const TableSchema = new mongoose.Schema({
   name: {
@@ -13,6 +15,8 @@ const TableSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  reservations: [ { type: Reservation.schema } ]
+  
   // tableNumber: [{ number: Number, unavailableDates: { type: [Date] }}],
 });
 
