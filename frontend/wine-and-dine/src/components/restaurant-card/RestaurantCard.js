@@ -91,8 +91,8 @@ const RestaurantCard = () => {
           ))}
       </div>
       {filteredRestaurantsByCategory &&
-        filteredRestaurantsByCategory.map((restaurant) => (
-          <div className="card-position">
+        filteredRestaurantsByCategory.map((restaurant, index) => (
+          <div className="card-position" key={index}>
             <div className="card">
               <div className="card-left">
                 <img src={restaurant.image} alt=""></img>

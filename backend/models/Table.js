@@ -1,19 +1,24 @@
 import mongoose from "mongoose";
 
-const TableSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
+const TableSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    capacity: {
+      type: Number,
+      required: true,
+    },
+    location: {
+      type: String,
+      required: true,
+    },
+    reservations: [
+      { hour: Number, endHour: Number, date: Date, restaurantName: String },
+    ],
   },
-  capacity: {
-    type: Number,
-    required: true,
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-  // tableNumber: [{ number: Number, unavailableDates: { type: [Date] }}],
-});
+  { timestamps: true }
+);
 
 export default mongoose.model("Table", TableSchema);

@@ -11,6 +11,6 @@ router.get("/:id", getReservation);
 router.get("/", getReservations);
 
 //CREATE
-router.post("/:restaurantid", createReservation);
+router.post("/:tableid", createReservation);
 
 export default router;

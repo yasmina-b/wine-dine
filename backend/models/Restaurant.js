@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import Reservation from "./Reservation.js";
-import Table from "./Table.js"
+import Table from "./Table.js";
 
 const RestaurantSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: false },
@@ -15,7 +15,10 @@ const RestaurantSchema = new mongoose.Schema({
   website: { type: String },
   menu: { type: String },
   maps: { type: String },
-  tables: [ { type: Table.schema }],
-  reservations: [ { type: Reservation.schema } ],
+  tables: {
+    type: [String],
+  },
+  //tables: [ { type: Table.schema }],
+  //reservations: [ { type: Reservation.schema } ],
 });
 export default mongoose.model("Restaurant", RestaurantSchema);

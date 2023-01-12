@@ -67,7 +67,7 @@ const RestaurantPage = () => {
         </div>
 
         <div className="nameRestaurantPage">
-          <h3 key={restaurant._id}>{restaurant.name}</h3>
+          <h3>{restaurant.name}</h3>
         </div>
 
         <div className="categoryRestaurantPage">
