@@ -1,5 +1,6 @@
 import Reservation from "../models/Reservation.js";
 import Restaurant from "../models/Restaurant.js";
+import Table from "../models/Table.js";
 
 export const getReservations = async (req, res, next) => {
   try {
@@ -20,25 +21,26 @@ export const getReservation = async (req, res, next) => {
 };
 
 export const createReservation = async (req, res, next) => {
-    const restaurantId = req.params.restaurantid;
-    const newReservation = new Reservation({
-        date: req.body.date,
-        hour: req.body.hour,
-        endHour: req.body.endHour,
-    });
-  
+  const tableId = req.params.tableid;
+  const newReservation = {
+    date: req.body.date,
+    hour: req.body.hour,
+    endHour: req.body.endHour,
+  };
+
+  try {
+    //const savedReservation = await newReservation.save();
     try {
-      const savedReservation = await newReservation.save();
-      try {
-        await Restaurant.findByIdAndUpdate(restaurantId, {
-          $push: { reservations: savedReservation},
-        });
-      } catch (err) {
-        next(err);
-      }
-      res.status(200).json(savedReservation);
+      await Table.findByIdAndUpdate(tableId, {
+        $push: {
+          reservations: newReservation,
+        },
+      });
     } catch (err) {
       next(err);
     }
-  };
-
+    res.status(200).json(newReservation);
+  } catch (err) {
+    next(err);
+  }
+};

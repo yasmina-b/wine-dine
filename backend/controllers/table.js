@@ -9,7 +9,7 @@ export const createTable = async (req, res, next) => {
     const savedTable = await newTable.save();
     try {
       await Restaurant.findByIdAndUpdate(restaurantId, {
-        $push: { tables: savedTable },
+        $push: { tables: savedTable._id },
       });
     } catch (err) {
       next(err);
