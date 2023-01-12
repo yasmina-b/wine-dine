@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import MenuBar from "../../components/menubar/MenuBar";
 import Navbar from "../../components/navbar/Navbar";
+import AuthContext from "../../context/AuthContext";
 import "./ReservationPage.css";
 
 const ReservationPage = () => {
@@ -13,6 +14,9 @@ const ReservationPage = () => {
   const [allTables, setAllTables] = useState([]);
   const [availableTables, setAvailableTables] = useState([]);
   const [tableId, setTableId] = useState("");
+  const [restaurant, setRestaurant] = useState([]);
+
+  const { user } = React.useContext(AuthContext);
 
   const getRestaurantTablesById = async () => {
     try {
@@ -20,7 +24,17 @@ const ReservationPage = () => {
         `http://localhost:8800/api/restaurants/alltables/${id}`
       );
       setAllTables(response.data);
-      //console.log(response.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const getRestaurantName = async () => {
+    try {
+      const res = await axios.get(
+        `http://localhost:8800/api/restaurants/${id}`
+      );
+      setRestaurant(res.data);
     } catch (err) {
       console.error(err);
     }
@@ -28,7 +42,8 @@ const ReservationPage = () => {
 
   useEffect(() => {
     getRestaurantTablesById();
-  }, []);
+    getRestaurantName();
+  });
 
   const isAvailable = (reservations) => {
     const newDate = new Date(date).getTime();
@@ -62,6 +77,7 @@ const ReservationPage = () => {
   };
 
   const makeReservation = async (e) => {
+    const userId = user._id ? user._id : "no id";
     e.preventDefault();
     try {
       const res = await axios.post(
@@ -79,6 +95,18 @@ const ReservationPage = () => {
     } catch (err) {
       console.log(err);
     }
+
+    try {
+      const res = await axios.post(
+        `http://localhost:8800/api/reservations/user/${userId}`,
+        {
+          date,
+          hour,
+          endHour,
+          restaurantName: restaurant.name,
+        }
+      );
+    } catch (err) {}
   };
 
   return (
@@ -86,6 +114,9 @@ const ReservationPage = () => {
       <Navbar></Navbar>
       <div className="input-styling">
         <h1 className="reservation-title">SELECT YOUR PREFERENCES:</h1>
+        <h6 className="reservation-subtitle">
+          You are booking a table at {restaurant.name}{" "}
+        </h6>
         <label>Choose a date:</label>
         <div className="input-box-style">
           <input

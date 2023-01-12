@@ -32,21 +32,6 @@ export const updateTable = async (req, res, next) => {
     next(err);
   }
 };
-export const updateTableAvailability = async (req, res, next) => {
-  try {
-    await Table.updateOne(
-      { "tableNumber._id": req.params.id },
-      {
-        $push: {
-          "tablenNumber.$.unavailableDates": req.body.dates,
-        },
-      }
-    );
-    res.status(200).json("Table status has been updated.");
-  } catch (err) {
-    next(err);
-  }
-};
 export const deleteTable = async (req, res, next) => {
   const tableId = req.params.tableid;
   try {

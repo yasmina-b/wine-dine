@@ -106,14 +106,13 @@ const RestaurantPage = () => {
 
         <div className="TextWrapper">
           <h2 className="websiteText">View website</h2>
-          <h2 className="websiteText">Menu</h2>
-          <h2 className="websiteText">Go to Maps</h2>
+          <h2 className="menuText">Menu</h2>
+          <h2 className="mapsText">Go to Maps</h2>
         </div>
 
         <div className="bookButtonWrapper">
           <button
             className="bookButton"
-            // onClick={() => navigate(`/restaurants/alltables/${restaurant._id}`)}
             onClick={() => navigate(`/reservation/${restaurant._id}`)}
           >
             BOOK A TABLE

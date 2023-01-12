@@ -8,7 +8,7 @@ const router = express.Router();
 router.get("/", getUsers);
 
 //GET
-router.get("/:id", verifyUser, getUser);
+router.get("/:id", getUser);
 
 //UPDATE
 router.put("/:id", updateUser);

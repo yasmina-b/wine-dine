@@ -10,5 +10,8 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  reservations: [
+    { hour: Number, endHour: Number, date: Date, restaurantName: String },
+  ],
 });
 export default mongoose.model("User", UserSchema);
