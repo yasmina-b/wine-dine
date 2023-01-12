@@ -12,7 +12,9 @@ const MenuBar = () => {
       <div className="container2">
         <div className="wrapper2">
           <div className="left">
+            <Link to="/userreservation">
             <span className="material-symbols-outlined">event</span>
+            </Link>
           </div>
           <div className="center">
             <Link to="/account">

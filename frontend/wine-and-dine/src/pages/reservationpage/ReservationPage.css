@@ -34,6 +34,14 @@
   margin-top: 150px;
 }
 
+.reservation-subtitle {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: black;
+  margin-top: 50px;
+}
+
 .confirmButton {
   min-height: 650px;
   max-height: 1100px;

@@ -15,7 +15,7 @@ const TableSchema = new mongoose.Schema(
       required: true,
     },
     reservations: [
-      { hour: Number, endHour: Number, date: Date, restaurantName: String },
+      { hour: Number, endHour: Number, date: Date },
     ],
   },
   { timestamps: true }

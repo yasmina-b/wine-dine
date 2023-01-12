@@ -86,7 +86,21 @@
 .websiteText {
   font-size: 39px;
   position: relative;
+  margin-left: 70px;
+  color: rgb(101, 101, 101);
+}
+
+.menuText {
+  font-size: 39px;
+  position: relative;
   margin-left: 90px;
+  color: rgb(101, 101, 101);
+}
+
+.mapsText {
+  font-size: 39px;
+  position: relative;
+  margin-left: 120px;
   color: rgb(101, 101, 101);
 }
 

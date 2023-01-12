@@ -10,6 +10,7 @@ import RestaurantPage from "./pages/restaurantpage/RestaurantPage";
 import WishlistPage from "./pages/wishlistpage/WishlistPage";
 import RestaurantTables from "./pages/tablespage/RestaurantTables";
 import ReservationPage from "./pages/reservationpage/ReservationPage";
+import UserReservation from "./pages/userresverationpage/UserReservation";
 
 function AppRoutes() {
   return (
@@ -25,6 +26,7 @@ function AppRoutes() {
         <Route path="/restaurants/:id" element={<RestaurantPage/>}></Route>
         <Route path="/wishlist" element={<WishlistPage/>}></Route>
         <Route path="/reservation/:id" element={<ReservationPage/>}></Route>
+        <Route path="/userreservation" element={<UserReservation/>}></Route>
       </Routes>
     </BrowserRouter>
   );
