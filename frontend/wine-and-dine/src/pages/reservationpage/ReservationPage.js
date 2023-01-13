@@ -117,7 +117,7 @@ const ReservationPage = () => {
         <h6 className="reservation-subtitle">
           You are booking a table at {restaurant.name}{" "}
         </h6>
-        <label>Choose a date:</label>
+        <label className="label-style">Choose a date:</label>
         <div className="input-box-style">
           <input
             className="date-input"
@@ -129,7 +129,7 @@ const ReservationPage = () => {
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
-        <label>Choose an hour:</label>
+        <label className="label-style">Choose an hour:</label>
         <div className="input-box-style">
           <input
             className="hour-input"
@@ -138,7 +138,7 @@ const ReservationPage = () => {
             onChange={(e) => setHour(e.target.value)}
           ></input>
         </div>
-        <label>Choose an end hour for your reservation:</label>
+        <label className="label-style">Choose an end hour for your reservation:</label>
         <div className="input-box-style">
           <input
             className="hour-input"
@@ -147,24 +147,28 @@ const ReservationPage = () => {
             onChange={(e) => setEndHour(e.target.value)}
           ></input>
         </div>
-        <label>Available tables:</label>
-        {availableTables.length > 0 && (
-          <select onChange={handleChooseTable}>
-            {availableTables.map((table, index) => (
-              <option key={index} value={table._id}>
-                {table.name}
-              </option>
-            ))}
-          </select>
-        )}
-
-        <div className="confirmButton">
+        <label className="label-style">Available tables:</label>
+        <div className="showButton">
           <button
-            className="confirm-button"
+            className="show-button"
             onClick={handleShowAvailableTables}
           >
             SHOW TABLES
           </button>
+        </div>
+        {availableTables.length > 0 && (
+          <div className="select-position">
+          <select className="select-stle" onChange={handleChooseTable}>
+            {availableTables.map((table, index) => (
+              <option key={index} value={table._id}>
+                {table.name} : {table.capacity} persons : {table.location}
+              </option>
+            ))}
+          </select>
+          </div>
+        )}
+
+        <div className="confirmButton">
           <button
             className="confirm-button"
             onClick={(e) => makeReservation(e)}

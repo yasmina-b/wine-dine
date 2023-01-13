@@ -6,6 +6,7 @@ import AuthContext from "../../context/AuthContext";
 import WebImg from "../../photos/web.png";
 import MenuImg from "../../photos/menu.png";
 import Back from "../../photos/back-arrow.png";
+import MenuBar from "../../components/menubar/MenuBar";
 
 const RestaurantPage = () => {
   const { id } = useParams();
@@ -62,12 +63,18 @@ const RestaurantPage = () => {
         <div>
           <button type="button" className="backButton"></button>
           <Link to="/restaurants">
-           <img className="backArrow" src={Back} alt=""></img>
+            <img className="backArrow" src={Back} alt=""></img>
           </Link>
         </div>
 
         <div className="nameRestaurantPage">
           <h3>{restaurant.name}</h3>
+        </div>
+
+        <div className="addressRestaurantPage">
+          <div className="address">
+          <h3>{restaurant.address}</h3>
+          </div>
         </div>
 
         <div className="categoryRestaurantPage">
@@ -118,6 +125,7 @@ const RestaurantPage = () => {
             BOOK A TABLE
           </button>
         </div>
+        <MenuBar></MenuBar>
       </div>
     </div>
   );
