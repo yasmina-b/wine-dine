@@ -16,34 +16,43 @@ const WishlistPage = () => {
   };
 
   return (
-    <div className="main-pageWish">
+    <React.Fragment>
       <Navbar></Navbar>
-      <div className="wishlistTitle">
-        <h2> MY FAVORITES LIST</h2>
-      </div>
-      {wishlist.map((restaurant, index) => {
-        return (
-          <div className="card-position-fav" key={index}>
-            <div className="card-fav">
-              <div className="card-left-fav">
-                <img src={restaurant.image} alt=""></img>
-              </div>
-              <div className="card-right-fav">
-                <h2 className="restaurant-name-fav">{restaurant.name}</h2>
-                <button
-                  className="button-design-fav"
-                  onClick={() => removeItemFromWishlist(index)}
-                >
-                  REMOVE
-                </button>
-                <button className="button-design-fav-rem"
-                 onClick={() => navigate(`/restaurants/${restaurant._id}`)}>BOOK NOW</button>
-              </div>
-            </div>
+      <div className="main-2">
+        <div className="main-pageWish">
+          <div className="wishlistTitle">
+            <h2> MY FAVORITES LIST</h2>
           </div>
-        );
-      })}
-    </div>
+          {wishlist.map((restaurant, index) => {
+            return (
+              <div className="card-position-fav" key={index}>
+                <div className="card-fav">
+                  <div className="card-left-fav">
+                    <img src={restaurant.image} alt=""></img>
+                  </div>
+                  <div className="card-right-fav">
+                    <h2 className="restaurant-name-fav">{restaurant.name}</h2>
+                    <button
+                      className="button-design-fav"
+                      onClick={() => removeItemFromWishlist(index)}
+                    >
+                      REMOVE
+                    </button>
+                    <button
+                      className="button-design-fav-rem"
+                      onClick={() => navigate(`/restaurants/${restaurant._id}`)}
+                    >
+                      BOOK NOW
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* <MenuBar></MenuBar> */}
+    </React.Fragment>
   );
 };
 

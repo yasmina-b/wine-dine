@@ -2,8 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./MyAccountPage.css";
-import Back from "../../photos/back-arrow.png";
-import { Link } from "react-router-dom";
+import MenuBar from "../../components/menubar/MenuBar";
 
 
 const MyAccountPage = () => {
@@ -70,7 +69,7 @@ const MyAccountPage = () => {
           </button>
         </div>
       </div>
-      {/* <MenuBar></MenuBar> */}
+      <MenuBar></MenuBar>
     </div>
   );
 };

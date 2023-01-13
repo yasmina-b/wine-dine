@@ -55,7 +55,7 @@ const RestaurantCard = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <div className="alignment">
         <div className="inline">
           <div className="input-icons">
