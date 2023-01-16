@@ -1,9 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import MenuBar from "../../components/menubar/MenuBar";
 import Navbar from "../../components/navbar/Navbar";
 import AuthContext from "../../context/AuthContext";
 import "./WishlistPage.css";
+import Back from "../../photos/back-arrow.png";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const WishlistPage = () => {
   const { wishlist, customSetWishlist } = React.useContext(AuthContext);
@@ -23,6 +25,14 @@ const WishlistPage = () => {
           <div className="wishlistTitle">
             <h2> MY FAVORITES LIST</h2>
           </div>
+
+          <div>
+          <button type="button" className="backButtonWishList"></button>
+          <Link to="/restaurants">
+            <img className="backArrowWishList" src={Back} alt=""></img>
+          </Link>
+        </div>
+
           {wishlist.map((restaurant, index) => {
             return (
               <div className="card-position-fav" key={index}>

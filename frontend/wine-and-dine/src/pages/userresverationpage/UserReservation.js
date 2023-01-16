@@ -3,6 +3,8 @@ import axios from "axios";
 import MenuBar from "../../components/menubar/MenuBar";
 import Navbar from "../../components/navbar/Navbar";
 import "./UserReservation.css";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import Back from "../../photos/back-arrow.png";
 
 const UserReservation = () => {
   const [users, setUsers] = useState([]);
@@ -38,7 +40,16 @@ const UserReservation = () => {
       <div className="main-page">
         <div className="main-2">
           <h1 className="bookings-title">MY BOOKINGS</h1>
+
           <div>
+          <button type="button" className="backButtonUserReservation"></button>
+          <Link to="/restaurants">
+            <img className="backArrowUserReservation" src={Back} alt=""></img>
+          </Link>
+        </div>
+
+          <div>
+            
             {users.reservations &&
               users.reservations.map((user, index) => (
                 <div className="card-position" key={index}>

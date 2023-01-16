@@ -5,6 +5,8 @@ import MenuBar from "../../components/menubar/MenuBar";
 import Navbar from "../../components/navbar/Navbar";
 import AuthContext from "../../context/AuthContext";
 import "./ReservationPage.css";
+import { Link } from "react-router-dom";
+import Back from "../../photos/back-arrow.png";
 
 const ReservationPage = () => {
   const { id } = useParams();
@@ -112,6 +114,15 @@ const ReservationPage = () => {
   return (
     <div className="main-page">
       <Navbar></Navbar>
+
+      <div>
+          <button type="button" className="backButtonReservation"></button>
+          <Link to={`/restaurants/${restaurant._id}`}>
+            <img className="backArrowReservation" src={Back} alt=""></img>
+          </Link>
+        </div>
+
+
       <div className="input-styling">
         <h1 className="reservation-title">SELECT YOUR PREFERENCES:</h1>
         <h6 className="reservation-subtitle">
@@ -158,7 +169,7 @@ const ReservationPage = () => {
         </div>
         {availableTables.length > 0 && (
           <div className="select-position">
-          <select className="select-stle" onChange={handleChooseTable}>
+          <select className="select-style" onChange={handleChooseTable}>
             {availableTables.map((table, index) => (
               <option key={index} value={table._id}>
                 {table.name} : {table.capacity} persons : {table.location}
