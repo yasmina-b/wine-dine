@@ -23,15 +23,18 @@
 .select-position {
   display: flex;
   justify-content: center;
+
 }
 
 .select-style {
-  font-size: 50px;
-  width: 200px;
+  font-size: 30px;
+  width: 380px;
+  height: 100px;
+  margin-top: 40px;
 }
 
 .label-style {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .input-box-style {
@@ -83,7 +86,7 @@
   align-items: center;
   border-radius: 14px;
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 100px;
 }
 
 .confirm-button {
@@ -97,7 +100,7 @@
   align-items: center;
   border-radius: 14px;
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 160px;
 }
 
 .tables {
@@ -110,3 +113,29 @@
   width: 300px;
   border: 3px solid black;
 }
+
+.backArrowReservation{
+  position: relative;
+  bottom: 175px;
+  margin-left: 20px;
+  margin-top: 20px;
+  right: 20%;
+  font-size: 100px;
+  cursor: pointer;
+}
+
+
+.backButtonReservation{
+  position: relative;
+  bottom: 150px;
+  background-color: #ffffff;
+  border: #f6c667;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 120px;
+  padding: 0px;
+  cursor: pointer;
+}
+

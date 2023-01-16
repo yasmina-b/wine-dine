@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./MyAccountPage.css";
 import MenuBar from "../../components/menubar/MenuBar";
-
+import Back from "../../photos/back-arrow.png";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const MyAccountPage = () => {
   const [users, setUsers] = useState([]);
@@ -30,6 +31,13 @@ const MyAccountPage = () => {
     <div className="account-page">
       <Navbar></Navbar>
       <h2 className="account-title">MY ACCOUNT INFO</h2>
+      <div>
+          <button type="button" className="backButtonMyAccount"></button>
+          <Link to="/restaurants">
+            <img className="backArrowMyAccount" src={Back} alt=""></img>
+          </Link>
+        </div>
+
       <div className="input-alignment">
         <label>First Name</label>
         <div className="input-box">
