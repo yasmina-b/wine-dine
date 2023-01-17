@@ -1,3 +1,4 @@
+import Alert from "@mui/material/Alert";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
@@ -13,6 +14,9 @@ const RestaurantPage = () => {
   const navigate = useNavigate();
   const [restaurant, setRestaurant] = useState({});
   const { wishlist, customSetWishlist } = React.useContext(AuthContext);
+  const [alertOpen, setAlertOpen] = useState(false);
+
+ 
 
   const getRestaurantById = async () => {
     try {
@@ -33,6 +37,8 @@ const RestaurantPage = () => {
 
   const handleAddRestaurant = (restaurant) => {
     customSetWishlist([...wishlist, restaurant]);
+    setAlertOpen(true);
+    setTimeout(() => setAlertOpen(false), 10000);
   };
 
   return (
@@ -44,11 +50,29 @@ const RestaurantPage = () => {
       <div className="main-page">
         
         <div className="imageRestaurantPageWrapper">
+
+        
+
           <img
             className="imageRestaurantPage"
             src={restaurant.image}
             alt=""
           ></img>
+        </div>
+
+        <div className="FavoriteWrapper">
+        <div className="addedToFavoriteMessage">
+        {alertOpen && (
+          <Alert  sx={{
+            width: "760px",
+            fontSize: "45px",
+            display: "flex",
+            alignItems: "center",
+          }}severity="success">
+            This restaurant has been added to your wishlist!
+          </Alert>
+        )}
+        </div>
         </div>
 
         <div>
@@ -61,6 +85,8 @@ const RestaurantPage = () => {
           </button>
         </div>
 
+      
+        
         <div>
           <button type="button" className="backButton"></button>
           <Link to="/restaurants">
@@ -126,6 +152,9 @@ const RestaurantPage = () => {
             BOOK A TABLE
           </button>
         </div>
+        
+      
+
         <MenuBar></MenuBar>
       </div>
     </div>
