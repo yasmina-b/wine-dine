@@ -43,3 +43,17 @@
   width: 500px !important;
   margin: auto;
 }
+
+.message{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 750px;
+}
+
+
+.messageWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+}
