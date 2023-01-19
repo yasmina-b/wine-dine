@@ -6,27 +6,25 @@
   margin-top: 100px;
 }
 
-
-
 .booked-restaurant {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 35px;
-    font-weight: 650;
-    color:#900c27
+  text-align: center;
+  margin-top: 30px;
+  font-size: 35px;
+  font-weight: 650;
+  color: #900c27;
 }
 
 .booking-details {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 30px;
-    font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .backButtonUserReservation {
   position: relative;
   bottom: 340px;
-  background-color: #ffffff;
+  background-color: #f6c667;
   border: #000000;
   border-color: #000000;
   left: 20px;
@@ -38,7 +36,7 @@
   cursor: pointer;
 }
 
-.backArrowUserReservation{
+.backArrowUserReservation {
   position: relative;
   bottom: 370px;
   margin-left: 20px;
@@ -46,7 +44,6 @@
   right: 20%;
   font-size: 100px;
   cursor: pointer;
-  
 }
 
 .backArrowUserReservation img {

@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import AuthContext from "../../context/AuthContext";
 import Navbar from "../../components/navbar/Navbar";
-import Alert from "@mui/material/Alert";
+//import Alert from "@mui/material/Alert";
 
 function LogInPage() {
   const navigate = useNavigate();
   const { setUser } = React.useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+  //const [message, setMessage] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -27,16 +27,16 @@ function LogInPage() {
       localStorage.setItem("user", JSON.stringify(res.data));
 
       if (res.status === 200) {
-        setMessage("Successfully logged in!");
+        //setMessage("Successfully logged in!");
         console.log("login successful");
         navigate("/restaurants");
       }
     } catch (error) {
-      setMessage("Error: Login failed");
+      //setMessage("Error: Login failed");
     }
   };
   return (
-    <body>
+    <div>
       <Navbar></Navbar>
       <div className="title">LOGIN</div>
       <div className="label-wrapper">
@@ -66,7 +66,7 @@ function LogInPage() {
           LOGIN
         </button>
       </div>
-      <div className="messageWrapper">
+      {/* <div className="messageWrapper">
         {message ? (
           <Alert
             sx={{
@@ -80,8 +80,8 @@ function LogInPage() {
             {message}
           </Alert>
         ) : null}
-      </div>
-    </body>
+      </div> */}
+    </div>
   );
 }
 

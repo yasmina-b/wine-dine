@@ -1,4 +1,3 @@
-import Alert from "@mui/material/Alert";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
@@ -14,9 +13,7 @@ const RestaurantPage = () => {
   const navigate = useNavigate();
   const [restaurant, setRestaurant] = useState({});
   const { wishlist, customSetWishlist } = React.useContext(AuthContext);
-  const [alertOpen, setAlertOpen] = useState(false);
-
- 
+  const [clicked, setClicked] = useState(false);
 
   const getRestaurantById = async () => {
     try {
@@ -37,8 +34,7 @@ const RestaurantPage = () => {
 
   const handleAddRestaurant = (restaurant) => {
     customSetWishlist([...wishlist, restaurant]);
-    setAlertOpen(true);
-    setTimeout(() => setAlertOpen(false), 10000);
+    setClicked(!clicked);
   };
 
   return (
@@ -47,32 +43,18 @@ const RestaurantPage = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
       />
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
+
       <div className="main-page">
-        
         <div className="imageRestaurantPageWrapper">
-
-        
-
           <img
             className="imageRestaurantPage"
             src={restaurant.image}
             alt=""
           ></img>
-        </div>
-
-        <div className="FavoriteWrapper">
-        <div className="addedToFavoriteMessage">
-        {alertOpen && (
-          <Alert  sx={{
-            width: "760px",
-            fontSize: "45px",
-            display: "flex",
-            alignItems: "center",
-          }}severity="success">
-            This restaurant has been added to your wishlist!
-          </Alert>
-        )}
-        </div>
         </div>
 
         <div>
@@ -81,12 +63,15 @@ const RestaurantPage = () => {
             className="favoriteButton"
             onClick={() => handleAddRestaurant(restaurant)}
           >
-            <span className="material-symbols-outlined">star</span>
+            <span
+              className="material-icons"
+              style={{ fontSize: 50, color: clicked ? " #900c27" : "black" }}
+            >
+              favorite
+            </span>
           </button>
         </div>
 
-      
-        
         <div>
           <button type="button" className="backButton"></button>
           <Link to="/restaurants">
@@ -100,7 +85,7 @@ const RestaurantPage = () => {
 
         <div className="addressRestaurantPage">
           <div className="address">
-          <h3>{restaurant.address}</h3>
+            <h3>{restaurant.address}</h3>
           </div>
         </div>
 
@@ -152,8 +137,6 @@ const RestaurantPage = () => {
             BOOK A TABLE
           </button>
         </div>
-        
-      
 
         <MenuBar></MenuBar>
       </div>
